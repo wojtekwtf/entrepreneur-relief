@@ -1,0 +1,64 @@
+body {
+  font-feature-settings: 'cv05' on;
+}
+
+.heading {
+  @include font-weight(600);
+  color: color(text);
+
+  &--primary {
+    $size: 28;
+    @include font-size($size);
+    line-height: calc(#{$size}px + 8px);
+    margin: globalVars(ui-default-measure) 0;
+  }
+
+  &--secondary {
+    $size: 16;
+    @include font-size($size);
+    line-height: calc(#{$size}px + 8px);
+    margin: globalVars(ui-default-measure) 0;
+  }
+
+  &--tertiary {
+    $size: 14;
+    @include font-size($size);
+    line-height: calc(#{$size}px + 8px);
+    margin: globalVars(ui-default-measure) 0;
+  }
+
+  &--section {
+    $size: 20;
+    @include font-size($size);
+    line-height: calc(#{$size}px + 8px);
+    margin: globalVars(ui-default-measure) 0;
+  }
+}
+
+.copy {
+  $size: 14;
+  @include font($size);
+  line-height: calc(#{$size}px + 8px);
+  color: color(text-light);
+  margin: globalVars(ui-default-measure) 0;
+
+  &--small {
+    $size: 12;
+    @include font($size);
+    line-height: calc(#{$size}px + 8px);
+  }
+
+  &--large {
+    $size: 16;
+    @include font($size);
+    line-height: calc(#{$size}px + 8px);
+  }
+
+  &--color-light {
+    color: color(text);
+  }
+
+  &--bold {
+    @include font-weight(600);
+  }
+}

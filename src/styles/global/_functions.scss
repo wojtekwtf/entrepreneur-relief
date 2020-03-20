@@ -1,0 +1,7 @@
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+@function globalVars($var-name) {
+  @return var(--global-#{$var-name});
+}

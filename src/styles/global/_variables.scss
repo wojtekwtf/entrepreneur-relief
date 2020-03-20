@@ -1,0 +1,57 @@
+$globalVars: (
+  font: 'Muli',
+  container: 1400px,
+  ui-default-measure: 8px,
+  ui-default-measure2x: calc(2 * #{globalVars(ui-default-measure)}),
+  ui-default-measure3x: calc(3 * #{globalVars(ui-default-measure)}),
+  ui-default-measure4x: calc(4 * #{globalVars(ui-default-measure)}),
+  ui-default-border-radius: 4px,
+  ui-default-border-radius--large: 8px,
+  ui-default-border-radius--x-large: 16px,
+  ui-default-border-radius--circle: 50%,
+  ui-default-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10),
+  ui-default-box-shadow--light: 0 10px 40px 0 rgba(23, 28, 48, 0.14),
+
+  macbook-width: 1152px,
+  buttonNegativePosition: -28px
+);
+
+$colors: (
+  primary: #6044E0, // blue-6
+  //primary-hover: #40A9FF, // blue-5
+  //primary-active: #096DD9, // blue-7
+  //primary-border: #91D5FF, // blue-3
+  //primary-background: #E6F7FF, // blue-1
+
+  gray-background: #F1F3F8,
+  gray-background-medium: #F2F5FF,
+  gray-background-dark: #D6DAEA,
+  border: #D9D9D9,
+
+  text: #191D32,
+  text-light: #444,
+
+  secondary: #4ED0FC,
+  info-primary: #5564F5,
+  accent: #df4f07,
+
+  //info-background: #E6F7FF, // blue-1
+  //info-border: #91D5FF, // blue-3
+  //info-primary: #1890FF, // blue-6
+  //info-primary-hover: #40A9FF, // blue-5
+
+  success-background: #F6FFED, // green-1
+  success-border: #B7EB8F, // green-3
+  success-primary: #52C41A, // green-6
+  success-primary-hover: #73D13D, // green-5
+
+  //warning-background: #FFFBE6, // gold-1
+  //warning-border: #FFE58F, // gold-3
+  //warning-primary: #FAAD14, // gold-6
+  //warning-primary-hover: #FFC53D, // gold-5
+  //
+  //error-background: #FFF1F0, // red-1
+  //error-border: #FFA39E, // red-3
+  //error-primary: #F5222D, // red-6
+  //error-primary-hover: #FF4D4F, // red-5
+);
