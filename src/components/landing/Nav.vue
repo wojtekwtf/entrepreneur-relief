@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav" v-if="$route.name !== 'signup'">
     <div class="container nav-container">
       <div class="nav-brand">
         <router-link to="/" class="flex align-center">

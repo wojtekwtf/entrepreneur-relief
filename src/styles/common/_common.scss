@@ -75,11 +75,15 @@
   background: #fff;
   color: color(primary);
   font: inherit;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0 , .1);
   border: 0;
   border-radius: 4px;
   outline: 0;
-  padding: 16px;
+  padding: 12px;
+
+  &--short {
+    width: 100px;
+  }
 }
 
 ::placeholder {
