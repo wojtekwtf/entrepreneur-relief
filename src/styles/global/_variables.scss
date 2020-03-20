@@ -1,5 +1,5 @@
 $globalVars: (
-  font: 'Muli',
+  font: 'CircularStd',
   container: 1400px,
   ui-default-measure: 8px,
   ui-default-measure2x: calc(2 * #{globalVars(ui-default-measure)}),
@@ -30,6 +30,9 @@ $colors: (
 
   text: #191D32,
   text-light: #444,
+  text-pink: #FCE5E4,
+
+  pink: #FFAEA7,
 
   //info-primary: #5564F5,
   accent: #ED777E,
@@ -54,6 +57,5 @@ $colors: (
   //error-border: #FFA39E,
   //error-primary: #F5222D,
   //error-primary-hover: #FF4D4F,
-  pink: #EB71A4,
   blue :#47A7EC
 );

@@ -1,6 +1,10 @@
 <template>
   <div class="section company-offers">
     Company offers
+
+    <div v-for="item in items">
+      {{ item.name }}
+    </div>
   </div>
 </template>
 

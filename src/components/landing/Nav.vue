@@ -2,12 +2,13 @@
   <div class="nav">
     <div class="container nav-container">
       <div class="nav-brand">
-        <router-link to="/">
-          E-Relief
+        <router-link to="/" class="flex align-center">
+          <img src="../../assets/logo.svg" alt="">
+          eRelief
         </router-link>
       </div>
       <div class="nav-menu">
-        <button class="btn btn-white" @click="$router.push('/signup')">For companies</button>
+        <button class="btn btn-white btn-pink" @click="$router.push('/signup')">For companies</button>
       </div>
     </div>
   </div>
@@ -16,6 +17,11 @@
 <script>
 export default {
   name: 'Nav',
+  methods: {
+    handleClick() {
+      console.log()
+    }
+  }
 }
 </script>
 
@@ -37,6 +43,10 @@ export default {
     &-brand a {
       @include font(24, 700);
       color: white !important;
+
+      img {
+        margin-right: 8px;
+      }
     }
 
     &-menu {
