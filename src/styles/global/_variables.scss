@@ -17,13 +17,13 @@ $globalVars: (
 );
 
 $colors: (
-  primary: #6044E0, // blue-6
-  //primary-hover: #40A9FF, // blue-5
-  //primary-active: #096DD9, // blue-7
-  //primary-border: #91D5FF, // blue-3
-  //primary-background: #E6F7FF, // blue-1
+  primary-dark: #20324D,
+  primary: #253E62,
+  primary-light: #27536C,
+  primary-x-light: #3360A4,
+  primary-xx-light: #3567B1,
 
-  gray-background: #F1F3F8,
+  gray-background: #FAFAFA,
   gray-background-medium: #F2F5FF,
   gray-background-dark: #D6DAEA,
   border: #D9D9D9,
@@ -31,27 +31,29 @@ $colors: (
   text: #191D32,
   text-light: #444,
 
-  secondary: #4ED0FC,
-  info-primary: #5564F5,
-  accent: #df4f07,
+  //info-primary: #5564F5,
+  accent: #ED777E,
+  accent-light: #F1AA7D,
 
-  //info-background: #E6F7FF, // blue-1
-  //info-border: #91D5FF, // blue-3
-  //info-primary: #1890FF, // blue-6
-  //info-primary-hover: #40A9FF, // blue-5
+  //info-background: #E6F7FF,
+  //info-border: #91D5FF,
+  //info-primary: #1890FF,
+  //info-primary-hover: #40A9FF,
 
-  success-background: #F6FFED, // green-1
-  success-border: #B7EB8F, // green-3
-  success-primary: #52C41A, // green-6
-  success-primary-hover: #73D13D, // green-5
+  success-background: #F6FFED,
+  success-border: #B7EB8F,
+  success-primary: #52C41A,
+  success-primary-hover: #73D13D,
 
-  //warning-background: #FFFBE6, // gold-1
-  //warning-border: #FFE58F, // gold-3
-  //warning-primary: #FAAD14, // gold-6
-  //warning-primary-hover: #FFC53D, // gold-5
+  //warning-background: #FFFBE6,
+  //warning-border: #FFE58F,
+  //warning-primary: #FAAD14,
+  //warning-primary-hover: #FFC53D,
   //
-  //error-background: #FFF1F0, // red-1
-  //error-border: #FFA39E, // red-3
-  //error-primary: #F5222D, // red-6
-  //error-primary-hover: #FF4D4F, // red-5
+  //error-background: #FFF1F0,
+  //error-border: #FFA39E,
+  //error-primary: #F5222D,
+  //error-primary-hover: #FF4D4F,
+  pink: #EB71A4,
+  blue :#47A7EC
 );

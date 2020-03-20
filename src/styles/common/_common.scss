@@ -24,11 +24,96 @@
   }
 }
 
-button {
-  background: color(success-primary);
+.btn {
+  position: relative;
+  background: color(primary);
   border: none;
   outline: none;
   color: white;
-  padding: 8px 16px;
+  padding: 8px 24px;
   @include font(14, 600);
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &-transparent {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+
+  &-white {
+    background: white;
+    color: color(primary-dark);
+  }
+
+  &-to-inside {
+    margin-left: -80px;
+    color: white;
+    background: color(blue);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+  }
+
+  &-small {
+    padding: 4px 8px;
+    @include font(12, 500);
+  }
+
+  &-accent {
+    background-color: color(accent);
+  }
+
+  &-blue {
+    background: color(blue);
+  }
+}
+
+.input {
+  width: 360px;
+  background: #fff;
+  color: color(primary);
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  padding: 16px;
+}
+
+::placeholder {
+  color: #AAA;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.tag {
+  @include font(12, 700);
+  background: rgba(#253E62, 0.1);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -6,6 +6,25 @@ body {
   @include font-weight(600);
   color: color(text);
 
+  &--hero {
+    $size: 45;
+    $sizeLg: 55;
+    $sizeXl: 65;
+    @include font-size($size);
+    line-height: calc(#{$size}px + 8px);
+    margin: globalVars(ui-default-measure3x) 0;
+
+    @include lg-up {
+      @include font-size($sizeLg);
+      line-height: calc(#{$sizeLg}px + 8px);
+    }
+
+    @include xl-up {
+      @include font-size($sizeXl);
+      line-height: calc(#{$sizeXl}px + 8px);
+    }
+  }
+
   &--primary {
     $size: 28;
     @include font-size($size);
@@ -33,10 +52,14 @@ body {
     line-height: calc(#{$size}px + 8px);
     margin: globalVars(ui-default-measure) 0;
   }
+
+  &--white {
+    color: white;
+  }
 }
 
 .copy {
-  $size: 14;
+  $size: 16;
   @include font($size);
   line-height: calc(#{$size}px + 8px);
   color: color(text-light);
@@ -49,7 +72,7 @@ body {
   }
 
   &--large {
-    $size: 16;
+    $size: 20;
     @include font($size);
     line-height: calc(#{$size}px + 8px);
   }
@@ -60,5 +83,13 @@ body {
 
   &--bold {
     @include font-weight(600);
+  }
+
+  &--white {
+    color: white;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
   }
 }

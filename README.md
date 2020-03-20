@@ -1,4 +1,4 @@
-# e-relief
+# E-Relief
 
 ## Project setup
 ```
