@@ -55,7 +55,7 @@ export default {
 
       span {
         @include center();
-        color: white;
+        color: color(pink-light);
         @include font(60, 600);
       }
     }

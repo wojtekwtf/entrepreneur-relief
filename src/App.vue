@@ -16,5 +16,7 @@
   }
 </script>
 <style lang="scss">
-
+  body {
+    background: color(pink-background);
+  }
 </style>
