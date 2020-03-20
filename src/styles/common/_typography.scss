@@ -26,7 +26,7 @@ body {
   }
 
   &--primary {
-    $size: 28;
+    $size: 34;
     @include font-size($size);
     line-height: calc(#{$size}px + 8px);
     margin: globalVars(ui-default-measure) 0;
@@ -54,7 +54,7 @@ body {
   }
 
   &--white {
-    color: white;
+    color: color(pink-light);
   }
 }
 
@@ -86,7 +86,7 @@ body {
   }
 
   &--white {
-    color: white;
+    color: color(pink-light);
   }
 
   &--uppercase {

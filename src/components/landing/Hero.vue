@@ -6,17 +6,16 @@
     <div class="rect rect4"></div>
     <div class="container">
       <div class="hero-main">
-        <h1 class="heading heading--hero heading--white">Support local businesses through COVID-19</h1>
-        <p class="copy copy--large copy--white">Pay less for products after coronavirus crisis.</p>
-        <p class="copy copy--large copy--white">Help businesses survive.</p>
-        <div class="hero-input">
-          <input placeholder="Buy voucher from..." class="input" type="text">
-          <button class="btn btn-white btn-to-inside">Search</button>
-          <button class="btn btn-transparent hero-learn-more">Learn more</button>
+        <h1 class="heading heading--hero heading--white text-center pink-light">Help support your <span class="pink">favorite</span><br> local business</h1>
+<!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Pay less for products after coronavirus crisis.</p>-->
+<!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Help businesses survive.</p>-->
+        <div class="hero-input flex column align-center justify-center">
+          <div class="input-wrapper">
+            <input placeholder="Search for a local business..." class="input" type="text">
+            <img src="../../assets/icon-search.svg">
+          </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="https://cdn2.iconfinder.com/data/icons/business-finance-character/28/10-512.png" alt="">
+        <a class="hero-learn-more pink-light text-center">Learn more</a>
       </div>
     </div>
   </div>
@@ -30,40 +29,30 @@ export default {
 
 <style scoped lang="scss">
   .hero {
-    min-height: calc(100vh - 80px);
+    min-height: 600px;
+    height: calc(80vh - 80px);
     background: color(primary-dark);
-    color: white;
+
+    color: color(pink-light);
     position: relative;
 
     .container {
-      min-height: inherit;
+      height: inherit;
       display: flex;
     }
 
     &-main {
-      max-width: 45vw;
-      min-height: inherit;
+      margin: 0 auto;
+      max-width: 60vw;
+      height: inherit;
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    &-image {
-      min-height: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      p {
-        background: yellow;
-        height: 30vw;
-        width: 40vh;
-      }
     }
 
     &-learn-more {
-      margin-left: 50px;
+      margin-top: 30px;
+      text-decoration: underline;
     }
 
     &-input {
@@ -80,7 +69,7 @@ export default {
   }
 
   .rect1 {
-    top: -50vh;
+    top: -70vh;
     left: -55vw;
     width: 110vw;
     height: 100vh;
@@ -100,7 +89,7 @@ export default {
   }
 
   .rect3 {
-    top: 50vh;
+    top: 30vh;
     left: 10vw;
     width: 15vw;
     height: 10vw;
