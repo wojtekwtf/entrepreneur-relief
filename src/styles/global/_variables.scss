@@ -17,10 +17,10 @@ $globalVars: (
 );
 
 $colors: (
-  primary-dark: darken(#703D61, 5%),
-  primary: #703d61,
-  primary-light: lighten(#703d61, 5%),
-  primary-x-light: lighten(#703d61, 8%),
+  primary-dark: #20324D,
+  primary: #253E62,
+  primary-light: #27536C,
+  primary-x-light: #3360A4,
   primary-xx-light: #3567B1,
 
   pink-background: #FFFBF7,
@@ -31,10 +31,10 @@ $colors: (
 
   text: #191D32,
   text-light: #444,
-  text-pink: #FEBc94,
+  text-pink: #FCE5E4,
 
-  pink: #FEBC94,
-  pink-light: lighten(#FEBC94, 15%),
+  pink: #FFAEA7,
+  pink-light: #FCF4F2,
 
   //info-primary: #5564F5,
   accent: #ED777E,
