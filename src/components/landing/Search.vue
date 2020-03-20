@@ -1,46 +1,42 @@
 <template>
   <div class="search">
     <div class="container">
-      <h2 class="heading heading--primary text-center">Search for businesses to help</h2>
+      <div class="search-content">
+        <div class="search-header flex space-between">
+          <div class="search-header-text">
+            <h2 class="heading heading--hero">Wrocław</h2>
+            <p class="copy copy--large">From fine dining to dancing salsa, Wrocław has the best services to look forward to.</p>
+          </div>
+          <router-link class="underline" to="/">See all in Wrocław</router-link>
+        </div>
 
-      <div class="flex justify-center align-center">
-        <input placeholder="Buy voucher from..." class="input" type="text">
-        <button class="btn btn-white btn-to-inside">Search</button>
-      </div>
-
-      <div class="search-card__list flex wrap">
-        <div
-          class="search-card"
-          v-for="i in 6"
-        >
-          <img src="https://dcassetcdn.com/design_img/2642892/545201/545201_14262046_2642892_63898bf6_image.png" alt="">
-          <p class="copy copy--small copy--bold">Rachel's Dance Studio</p>
-          <p class="copy copy--uppercase">On Offer</p>
-
+        <div class="search-card__list flex wrap">
           <div
-            class="search-card-offer flex space-between align-center"
-            v-for="i in 3"
+            class="search-card"
+            v-for="item in places"
           >
-            <p class="copy">10 dance lessons (1h)</p>
-            <div class="flex align-center">
-              <div class="tag">
-                350 zł
+            <div class="search-card-main">
+              <img class="search-card-logo" :src="item.logo" alt="">
+              <h4 class="heading heading--primary">{{ item.name }}</h4>
+              <div class="search-card-rating">
+                <img src="../../assets/star.svg">
+                {{ item.rating.value }} ({{ item.rating.count }})
               </div>
-              <button
-                class="btn btn-small "
-                @click="$router.push('/company/123')"
-              >
-                Buy
-              </button>
+              <p class="copy">{{ item.description }}</p>
+            </div>
+
+            <div
+              class="search-card-offer flex space-between align-center"
+              v-for="service in item.services"
+            >
+              <p class="copy">{{ service.name }}</p>
+              <div class="flex align-center">
+                <div class="tag">
+                  {{ service.price }} zł
+                </div>
+              </div>
             </div>
           </div>
-
-          <button
-            class="btn search-see-more btn-blue"
-            @click="$router.push('/company/123')"
-          >
-            See more
-          </button>
         </div>
       </div>
     </div>
@@ -48,43 +44,105 @@
 </template>
 
 <script>
-export default {
-  name: 'Search',
-}
+
+  export default {
+    name: 'Search',
+    data() {
+      return {
+        places: [
+          {
+            logo: 'https://www.gobrazilwines.com/wp-content/uploads/2019/01/GoBrazilWine_Vegan_Symbol-295x300.png',
+            name: 'Vega',
+            description: 'The oldest vegan bar in Poland that’s been open since 1987',
+            rating: {
+              value: 4.6,
+              count: 250
+            },
+            services: [
+              { name: 'Vegan rolls', price: 13  },
+              { name: 'Vegan noodles', price: 20  },
+              { name: 'Any burger', price: 19  }
+            ],
+          },
+          {
+            logo: 'https://i.pinimg.com/originals/80/78/22/8078227d0ce3cfe4f389d88400253f6d.png',
+            name: 'La Rosa Nostra',
+            description: 'The best place for delicious Polish dishes during the day time hours',
+            rating: {
+              value: 4.7,
+              count: 1675
+            },
+            services: [
+              { name: '2 desserts', price: 20 },
+              { name: '3 course dinner with drink', price: 40 },
+              { name: 'Wine tasting with sides', price: 80  }
+            ],
+          },
+          {
+            logo: 'https://yogaincambridge.co.uk/wp-content/uploads/2019/12/yoga_logo_02.png',
+            name: 'Factory Energy Yoga',
+            description: 'Summed up as the best place to clear you mind in Wrocław',
+            rating: {
+              value: 4.3,
+              count: 200
+            },
+            services: [
+              { name: 'Single class', price: 35 },
+              { name: '4 classes', price: 120 },
+              { name: 'Open ticket monthly', price: 200 }
+            ],
+          }
+        ]
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
   .search {
     padding: 100px 0;
 
-    .heading--primary {
-      margin-bottom: 32px;
+    &-content {
+      padding: 60px;
+      padding-left: 200px;
+      background-color: color(pink-light);
+    }
+
+    &-header-text {
+      max-width: 50%;
+
+      .heading--hero {
+        margin-top: 0;
+      }
     }
 
     &-card {
-      box-shadow: globalVars(ui-default-box-shadow--light);
-      border: 1px solid color(gray-background-medium);
-      padding: 16px 25px;
-      margin: 10px;
-      min-width: 400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin: 0 20px;
+      width: calc(100% / 3 - 40px);
+
+      &-logo {
+        height: 80px;
+        width: auto;
+      }
 
       &__list {
         margin-top: 50px;
       }
 
-      p {
-        text-align: center;
+      &-offer {
+        width: 100%;
+        padding: 4px 24px;
+        margin-top: 8px;
+        background-color: color(primary);
+        border-radius: 8px;
+
+        p {
+          color: white;
+        }
       }
 
-      &-offer {
-        box-shadow: globalVars(ui-default-box-shadow);
-        border: 1px solid color(gray-background-medium);
-        width: 100%;
-        padding: 8px;
-        margin: 4px 0;
+      &-main {
+        margin-bottom: 20px;
       }
 
       .tag {
@@ -95,8 +153,5 @@ export default {
     &-see-more {
       margin-top: 20px;
     }
-  }
-  img {
-    max-width: 150px;
   }
 </style>

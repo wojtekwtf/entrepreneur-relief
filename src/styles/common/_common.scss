@@ -29,7 +29,7 @@
   background: color(primary);
   border: none;
   outline: none;
-  color: white;
+  color: color(pink-light);
   padding: 8px 24px;
   @include font(14, 600);
   border-radius: 4px;
@@ -47,7 +47,7 @@
 
   &-to-inside {
     margin-left: -80px;
-    color: white;
+    color: color(pink-light);
     background: color(blue);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
   }
@@ -83,7 +83,7 @@
 }
 
 ::placeholder {
-  color: #AAA;
+  color: #161A27;
 }
 
 .flex {
@@ -112,11 +112,34 @@
 
 .tag {
   @include font(12, 700);
-  background: rgba(#253E62, 0.1);
+  background: white;
+  color: color(primary);
   padding: 4px 8px;
   border-radius: 12px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.pink {
+  color: color(pink);
+
+  &-light {
+    color: color(pink-light);
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+  }
+}
+
+.underline {
+  text-decoration: underline;
 }
