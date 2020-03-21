@@ -11,13 +11,9 @@
 </template>
 
 <script>
-  import Autocomplete from '@trevoreyre/autocomplete-vue'
 
   export default {
     name: 'Footer',
-    components: {
-      Autocomplete
-    },
   }
 </script>
 

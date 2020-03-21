@@ -21,7 +21,6 @@
       Search,
       HowItWorks,
       BusinessOfTheDay,
-      Footer,
     }
   }
 </script>
