@@ -1,30 +1,39 @@
 <template>
   <div class="how-it-works" id="how-it-works">
-    <div class="container flex">
-      <div class="how-it-works__text">
-        <h1 class="heading heading--hero">How does it work?</h1>
-        <h2 class="copy copy--large">We work together with the local businesses in Poland to help them generate an income and ensure they stay afloat in the times of trouble</h2>
-        <div class="how-it-works__list flex column">
+    <div class="container">
+      <h1 class="heading heading--hero">How does it work?</h1>
+      <h2 class="copy copy--large">Your favourite local place cannot sell its services due to the crisis. So let’s help them by buying their service for the future.</h2>
+      <div class="how-it-works__list flex row">
+        <div class="flex column">
           <div class="how-it-works__item flex column">
             <div class="flex">
               <div class="how-it-works__number"><span>1</span></div>
-              <h3 class="heading heading--primary heading">Find a business</h3>
+              <h3 class="heading heading--section heading">Find a business</h3>
             </div>
-            <p class="copy copy">Start by finding the local business you wish to support. View their page to see all the available services for purchase. </p>
+            <p class="copy">Start by finding your favourite place and view their page to see all the available services for purchase.</p>
           </div>
           <div class="how-it-works__item flex column">
             <div class="flex">
               <div class="how-it-works__number"><span>2</span></div>
-              <h3 class="heading heading--primary heading">Purchase a service</h3>
+              <h3 class="heading heading--section heading">Buy a service</h3>
             </div>
-            <p class="copy copy">By purchasing one of the service, you’ll be supporting the business financially in these troubled times.</p>
+            <p class="copy">Get a discount when you buy one or more services that you would like to use in the future.</p>
           </div>
+        </div>
+        <div class="flex column">
           <div class="how-it-works__item flex column">
             <div class="flex">
               <div class="how-it-works__number"><span>3</span></div>
-              <h3 class="heading heading--primary heading">Use it in the future</h3>
+              <h3 class="heading heading--section heading">Support you favorite businesses</h3>
             </div>
-            <p class="copy copy">Once the Polish government gives the okay for businesses to start operating again, you can cash in this purchase</p>
+            <p class="copy">Your favourite place will survive because of you, allowing them to keep their business up and running.</p>
+          </div>
+          <div class="how-it-works__item flex column">
+            <div class="flex">
+              <div class="how-it-works__number"><span>4</span></div>
+              <h3 class="heading heading--section heading">Look to the future</h3>
+            </div>
+            <p class="copy">In the future you will be able to book a moment most convenient for you, especially that these vouchers are valid for 1 year.</p>
           </div>
         </div>
       </div>
@@ -41,15 +50,9 @@
 <style scoped lang="scss">
   .how-it-works {
     padding: 80px 0px;
+    width: 790px;
+    margin: auto;
 
-    &__text {
-      padding-left: 150px;
-
-      > h2 {
-        max-width: 500px;
-        line-height: 40px;
-      }
-    }
 
     &__list {
       margin-top: 40px;
@@ -66,7 +69,6 @@
 
       .copy {
         padding-left: 50px;
-        margin-top: 0;
       }
     }
 

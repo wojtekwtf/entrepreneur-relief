@@ -47,7 +47,7 @@ body {
   }
 
   &--section {
-    $size: 20;
+    $size: 24;
     @include font-size($size);
     line-height: calc(#{$size}px + 8px);
     margin: globalVars(ui-default-measure) 0;
