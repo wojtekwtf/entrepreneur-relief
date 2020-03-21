@@ -4,7 +4,6 @@
     <HowItWorks></HowItWorks>
     <Search></Search>
     <BusinessOfTheDay></BusinessOfTheDay>
-    <Footer></Footer>
   </div>
 </template>
 
