@@ -72,8 +72,8 @@ export default new Vuex.Store({
       // use find fuction here.
       // https://vuex.vuejs.org/guide/getters.html
       console.log(router.history);
-      console.log(state);
-      return {};
+      console.log(state.businesses);
+      return state.businesses.find(business => business.id === router.history.params.id);
     }
   }
 })
