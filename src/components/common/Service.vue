@@ -30,11 +30,11 @@
     width: 100%;
     padding: 4px 24px;
     margin-top: 8px;
-    background-color: color(primary);
+    background-color: white;
     border-radius: 8px;
 
     p {
-      color: white;
+      color: black;
     }
 
     .tag {

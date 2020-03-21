@@ -2,7 +2,7 @@
   <div class="how-it-works" id="how-it-works">
     <div class="container flex">
       <div class="how-it-works__text">
-        <h1 class="heading heading--hero">How it works</h1>
+        <h1 class="heading heading--hero">How does it work?</h1>
         <h2 class="copy copy--large">We work together with the local businesses in Poland to help them generate an income and ensure they stay afloat in the times of trouble</h2>
         <div class="how-it-works__list flex column">
           <div class="how-it-works__item flex column">
@@ -28,10 +28,6 @@
           </div>
         </div>
       </div>
-      <div class="illustration_span">
-        <div class="illustration-background"></div>
-        <img class="illustration_image" src="../../assets/how-it-works-illu.svg" alt="empty restaurant">
-      </div>
     </div>
   </div>
 </template>
@@ -44,11 +40,9 @@
 
 <style scoped lang="scss">
   .how-it-works {
-    background: color(pink-background);
-    padding: 150px 0px;
+    padding: 80px 0px;
 
     &__text {
-      width: 50%;
       padding-left: 150px;
 
       > h2 {
@@ -77,7 +71,7 @@
     }
 
     &__number {
-      background: color(pink);
+      background: color(primary);
       position: relative;
       margin-right: 15px;
       margin-top: 7px;
@@ -93,24 +87,4 @@
     }
   }
 
-  .illustration_span {
-    position: relative;
-    margin-left: 100px;
-  }
-
-  .illustration_image {
-    width: 366px;
-    height: 515px;
-    z-index: 10;
-    position: relative;
-  }
-
-  .illustration-background {
-    position: absolute;
-    left: 80px;
-    top: 80px;
-    width: 366px;
-    height: 545px;
-    background-color: color(text-pink);
-  }
 </style>

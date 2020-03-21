@@ -41,10 +41,10 @@
     </div>
     <Confirm v-else class="register-form container flex column align-center"></Confirm>
     <div class="register-description container">
-      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
     </div>
   </div>
 </template>

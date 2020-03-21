@@ -53,8 +53,8 @@ body {
     margin: globalVars(ui-default-measure) 0;
   }
 
-  &--white {
-    color: color(pink-light);
+  &--black {
+    color: black;
   }
 }
 
@@ -85,8 +85,8 @@ body {
     @include font-weight(600);
   }
 
-  &--white {
-    color: color(pink-light);
+  &--black {
+    color: color(black);
   }
 
   &--accent {
