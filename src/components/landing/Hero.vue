@@ -116,6 +116,7 @@
 <style scoped lang="scss">
   .hero {
     min-height: 600px;
+    height: 100%;
     max-height: calc(80vh - 80px);
     background: color(primary-dark);
 
@@ -123,14 +124,22 @@
     position: relative;
 
     .container {
-      height: inherit;
+      min-height: 600px;
+      height: 100%;
+      max-height: calc(80vh - 80px);
       display: flex;
+
+      h1 {
+        margin-top: 0;
+      }
     }
 
     &-main {
+      min-height: 600px;
+      height: 100%;
+      max-height: calc(80vh - 80px);
       margin: 0 auto;
       max-width: 60vw;
-      height: inherit;
       display: flex;
       flex-direction: column;
       justify-content: center;
