@@ -4,6 +4,7 @@
     <Search></Search>
     <HowItWorks></HowItWorks>
     <BusinessOfTheDay></BusinessOfTheDay>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
   import Search from '@/components/landing/Search.vue'
   import HowItWorks from '@/components/landing/HowItWorks.vue'
   import BusinessOfTheDay from '@/components/landing/BusinessOfTheDay.vue'
+  import Footer from '@/components/landing/Footer.vue'
 
   export default {
     name: 'Landing',
@@ -19,7 +21,8 @@
       Hero,
       Search,
       HowItWorks,
-      BusinessOfTheDay
+      BusinessOfTheDay,
+      Footer,
     }
   }
 </script>
