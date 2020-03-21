@@ -1,8 +1,8 @@
 <template>
   <div class="landing">
     <Hero></Hero>
-    <Search></Search>
     <HowItWorks></HowItWorks>
+    <Search></Search>
     <BusinessOfTheDay></BusinessOfTheDay>
     <Footer></Footer>
   </div>
