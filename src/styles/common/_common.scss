@@ -17,13 +17,13 @@
 
 .btn {
   position: relative;
-  background: color(primary);
+  background: color(white);
   border: none;
   outline: none;
   color: black;
   padding: 8px 24px;
   @include font(14, 600);
-  border-radius: 4px;
+  border-radius: 18px;
   cursor: pointer;
 
   &-transparent {
@@ -58,6 +58,7 @@
 
   &-black {
     background: black;
+    color: white;
   }
 }
 
@@ -66,7 +67,7 @@
   &--alone {
     width: 360px;
     background: #fff;
-    color: color(primary);
+    color: color(black);
     font: inherit;
     box-shadow: 0 6px 15px 0 rgba(0, 0, 0 , .1);
     border: 0;
@@ -152,6 +153,7 @@
   background: transparent;
   border: none;
   padding: 0;
+  color: black;
 }
 
 .autocomplete-input:focus, .autocomplete-input[aria-expanded=true] {
@@ -174,7 +176,6 @@
   width: 100%;
 
   li:hover {
-    background: color(pink-background);
     cursor: pointer;
   }
 }
@@ -182,5 +183,11 @@
 .autocomplete-result {
   padding: 8px 24px;
   background: none;
-  color: color(primary);
+  color: black;
+}
+
+
+// stripe
+.Checkout.is-desktop .Header {
+  background: white !important;
 }

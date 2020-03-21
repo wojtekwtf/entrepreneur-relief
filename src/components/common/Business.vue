@@ -11,7 +11,7 @@
             v-for="service in business.services"
             :key="service.name"
             :service="service"
-            on-light="true"
+            :on-light="true"
             @set="handleSetActiveOrder(business, service)"
           >
           </Service>

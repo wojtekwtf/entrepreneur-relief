@@ -18,7 +18,7 @@
         </a>
       </div>
       <div class="nav-actions">
-        <button class="btn btn-white btn-black" @click="$router.push('/signup')">For companies</button>
+        <button class="btn btn-black" @click="$router.push('/signup')">For companies</button>
       </div>
     </div>
   </div>

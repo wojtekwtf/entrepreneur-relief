@@ -6,8 +6,9 @@
     <div class="rect rect4"></div>
     <div class="container">
       <div class="hero-main">
-        <h1 class="heading heading--hero heading--black text-center pink-light">Purchase a voucher to support <br> your favourite local place and
-          <br> enjoy the service in the future</h1>
+        <h1 class="heading heading--hero heading--black text-center pink-light">
+          Purchase a voucher of your local <br> place and enjoy the service <br> in the future
+        </h1>
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Pay less for products after coronavirus crisis.</p>-->
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Help businesses survive.</p>-->
         <div class="hero-input flex align-center justify-center">
@@ -115,25 +116,33 @@
 <style scoped lang="scss">
   .hero {
     min-height: 600px;
-    height: calc(80vh - 80px);
+    height: 100%;
+    max-height: calc(80vh - 80px);
     background: color(primary-dark);
 
     color: black;
     position: relative;
 
     .container {
-      height: inherit;
+      min-height: 600px;
+      height: 100%;
+      max-height: calc(80vh - 80px);
       display: flex;
+
+      h1 {
+        margin-top: 0;
+      }
     }
 
     &-main {
+      min-height: 600px;
+      height: 100%;
+      max-height: calc(80vh - 80px);
       margin: 0 auto;
       max-width: 60vw;
-      height: inherit;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-bottom: 80px;
     }
 
     &-learn-more {
@@ -159,7 +168,7 @@
   }
 
   .rect1 {
-    top: -70vh;
+    top: -80vh;
     left: -55vw;
     width: 110vw;
     height: 100vh;
@@ -174,7 +183,7 @@
     width: 30vw;
     height: 40vw;
     transform: skew(-0.14turn, 21deg) rotate(0deg);
-    background: linear-gradient(45deg, lighten(#FDD886, 2%) 0%, color(primary-dark) 100%);
+    background: linear-gradient(45deg, color(primary-light) 0%, color(primary-dark) 100%);
     border-radius: 50px;
   }
 
@@ -183,8 +192,8 @@
     left: 10vw;
     width: 15vw;
     height: 10vw;
-    transform: skew(-0.14turn, 21deg) rotate(0deg);
-    background: linear-gradient(90deg, lighten(#FDD886, 3%) 0%, lighten(#FDD886, 1%) 100%);
+    transform: skew(-0.14turn, 21deg) rotate(10deg);
+    background: linear-gradient(90deg, color(primary-x-light) 0%, lighten(#FDD886, 1%) 100%);
     border-radius: 1vw;
   }
 
