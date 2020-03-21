@@ -11,6 +11,7 @@
         <a
           class="nav-menu-item"
           v-for="item in menu"
+          :key="item.label"
           :href="item.href"
         >
           {{ item.label }}
@@ -42,11 +43,6 @@ export default {
           href: '#business-benefits'
         }
       ]
-    }
-  },
-  methods: {
-    handleClick() {
-      console.log()
     }
   }
 }

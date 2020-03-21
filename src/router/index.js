@@ -25,6 +25,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Company.vue')
   },
   {
+    path: '/company-list/:city',
+    name: 'company-list',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompanyList.vue')
+  },
+  {
     path: '*',
     redirect: () => '/'
   }
@@ -32,6 +37,9 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+  },
   routes
 });
 

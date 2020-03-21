@@ -6,7 +6,6 @@
 </template>
 
 <script>
-  // @ is an alias to /src
   import RegisterForm from '@/components/voucher-signup/RegisterForm.vue'
   import Confirm from '@/components/voucher-signup/Confirm.vue'
 

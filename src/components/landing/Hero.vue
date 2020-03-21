@@ -9,22 +9,106 @@
         <h1 class="heading heading--hero heading--white text-center pink-light">Help support your <span class="pink">favorite</span><br> local business</h1>
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Pay less for products after coronavirus crisis.</p>-->
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Help businesses survive.</p>-->
-        <div class="hero-input flex column align-center justify-center">
+        <div class="hero-input flex align-center justify-center">
           <div class="input-wrapper">
-            <input placeholder="Search for a local business..." class="input" type="text">
-            <img src="../../assets/icon-search.svg">
+            <Autocomplete
+              :search="searchBusiness"
+              placeholder="Search for a local business..."
+              aria-label="Search for a local business..."
+              class="input"
+              :get-result-value="getResultsValue"
+              @submit="handleSubmitBusiness"
+              :loading="loadingBusiness"
+            ></Autocomplete>
+            <img v-if="!loadingBusiness" src="../../assets/icon-search.svg">
+            <img v-else class="loading" src="../../assets/loading.svg">
+          </div>
+          <p class="hero-or copy copy--white">
+            or
+          </p>
+          <div class="input-wrapper">
+            <Autocomplete
+              :search="searchCity"
+              placeholder="Search for a city..."
+              aria-label="Search for a city..."
+              class="input"
+              :class="{ 'input--loading': true }"
+              :get-result-value="getResultsValue"
+              @submit="handleSubmitCity"
+              :loading="loadingCity"
+            ></Autocomplete>
+            <img v-if="!loadingCity" src="../../assets/icon-search.svg">
+            <img v-else class="loading" src="../../assets/loading.svg">
           </div>
         </div>
-        <a href="#search" class="hero-learn-more pink-light text-center">Learn more</a>
+        <a href="#search" class="hero-learn-more pink-light text-center underline">Learn more</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Hero',
-}
+  import Autocomplete from '@trevoreyre/autocomplete-vue'
+
+  export default {
+    name: 'Hero',
+    components: {
+      Autocomplete
+    },
+    data() {
+      return {
+        loadingBusiness: false,
+        loadingCity: false,
+        businesses: [
+          {
+            id: 1,
+            label: 'La Rosa Nostra'
+          },
+          {
+            id: 2,
+            label: 'Factory Energy Yoga'
+          }
+        ],
+        cities: [
+          {
+            city: 'warsaw',
+            label: 'Warsaw'
+          },
+          {
+            city: 'wroclaw',
+            label: 'Wrocław'
+          }
+        ]
+      }
+    },
+    methods: {
+      searchBusiness(input) {
+        if (input.length < 1) { return [] }
+        return this.businesses.filter(business => business.label.toLowerCase().startsWith(input.toLowerCase()));
+      },
+      searchCity(input) {
+        if (input.length < 1) { return [] }
+        return this.cities.filter(city => city.label.toLowerCase().startsWith(input.toLowerCase()));
+      },
+      getResultsValue(result) {
+        return result.label;
+      },
+      handleSubmitBusiness({id}) {
+        this.loadingBusiness = true;
+        return new Promise(resolve => setTimeout(() => {
+          this.$router.push({name: 'company', params: {id}});
+          resolve();
+        }, 500));
+      },
+      handleSubmitCity({city}) {
+        this.loadingCity = true;
+        return new Promise(resolve => setTimeout(() => {
+          this.$router.push({name: 'company-list', params: {city}});
+          resolve();
+        }, 500));
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
@@ -48,6 +132,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-bottom: 80px;
     }
 
     &-learn-more {
@@ -58,9 +143,13 @@ export default {
     &-input {
       margin-top: 30px;
 
-      .input {
+      .input .autocomplete-input {
         padding-right: 90px;
       }
+    }
+
+    &-or {
+      margin: 0 20px;
     }
   }
 
@@ -106,5 +195,22 @@ export default {
     transform: skew(-0.14turn, 21deg) rotate(0deg);
     background-color: transparent;
     border-radius: 50px;
+  }
+
+  .loading {
+    position: absolute;
+    top: 11px;
+    height: 20px;
+    width: 20px;
+    animation: loading 0.5s linear infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 </style>
