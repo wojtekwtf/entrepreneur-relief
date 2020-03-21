@@ -1,7 +1,6 @@
 <template>
   <div class="business-day">
     <div class="container">
-      <img src="../../assets/business.png" alt="">
       <p class="copy text-center">Business of the day</p>
       <Business
         :business="business"

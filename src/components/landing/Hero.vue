@@ -6,7 +6,7 @@
     <div class="rect rect4"></div>
     <div class="container">
       <div class="hero-main">
-        <h1 class="heading heading--hero heading--white text-center pink-light">Help support your <span class="pink">favorite</span><br> local business</h1>
+        <h1 class="heading heading--hero heading--black text-center pink-light">Help support your <span class="pink">favorite</span><br> local business</h1>
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Pay less for products after coronavirus crisis.</p>-->
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Help businesses survive.</p>-->
         <div class="hero-input flex align-center justify-center">
@@ -23,7 +23,7 @@
             <img v-if="!loadingBusiness" src="../../assets/icon-search.svg">
             <img v-else class="loading" src="../../assets/loading.svg">
           </div>
-          <p class="hero-or copy copy--white">
+          <p class="hero-or copy copy--black">
             or
           </p>
           <div class="input-wrapper">
@@ -117,7 +117,7 @@
     height: calc(80vh - 80px);
     background: color(primary-dark);
 
-    color: color(pink-light);
+    color: black;
     position: relative;
 
     .container {
@@ -173,7 +173,7 @@
     width: 30vw;
     height: 40vw;
     transform: skew(-0.14turn, 21deg) rotate(0deg);
-    background: linear-gradient(45deg, lighten(#20324D, 2%) 0%, color(primary-dark) 100%);
+    background: linear-gradient(45deg, lighten(#FDD886, 2%) 0%, color(primary-dark) 100%);
     border-radius: 50px;
   }
 
@@ -183,7 +183,7 @@
     width: 15vw;
     height: 10vw;
     transform: skew(-0.14turn, 21deg) rotate(0deg);
-    background: linear-gradient(90deg, lighten(#20324D, 3%) 0%, lighten(#20324D, 1%) 100%);
+    background: linear-gradient(90deg, lighten(#FDD886, 3%) 0%, lighten(#FDD886, 1%) 100%);
     border-radius: 1vw;
   }
 

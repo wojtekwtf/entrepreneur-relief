@@ -3,7 +3,6 @@
     class="business-preview"
   >
     <div class="business-preview-main">
-      <img class="business-preview-logo" :src="business.logo" alt="">
       <h4 class="heading heading--primary">{{ business.name }}</h4>
       <div class="business-preview-rating" v-if="business.rating">
         <img src="../../assets/star.svg">
@@ -50,8 +49,10 @@
 
 <style scoped lang="scss">
   .business-preview {
-    margin: 20px 30px;
+    margin: 10px 15px;
     width: calc(100% / 3 - 60px);
+    padding: 30px;
+    background: color(pink);
 
     &-logo {
       max-height: 80px;

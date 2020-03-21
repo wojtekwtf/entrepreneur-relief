@@ -18,7 +18,7 @@
         </a>
       </div>
       <div class="nav-actions">
-        <button class="btn btn-white btn-pink" @click="$router.push('/signup')">For companies</button>
+        <button class="btn btn-white btn-black" @click="$router.push('/signup')">For companies</button>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ export default {
 
     &-brand a {
       @include font(24, 700);
-      color: color(pink-light) !important;
+      color: black !important;
 
       img {
         margin-right: 8px;
@@ -74,7 +74,7 @@ export default {
     &-menu {
       &-item {
         margin: 0 16px;
-        color: color(pink-light);
+        color: black;
       }
     }
 

@@ -110,7 +110,7 @@
   .footer-box {
     height: 600px;
     padding: 100px 350px;
-    background-color: color(pink-light);
+    background-color: black;
 
     &__search {
       padding: 64px;

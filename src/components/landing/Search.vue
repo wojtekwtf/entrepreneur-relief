@@ -7,9 +7,9 @@
             <h2 class="heading heading--hero">Wrocław</h2>
             <p class="copy copy--large">From fine dining to dancing salsa, Wrocław has the best services to look forward to.</p>
           </div>
-          <a class="underline" @click="goToCompanyList('wroclaw')">See all in Wrocław</a>
-          <a class="underline" @click="goToCompanyList('warsaw')">See all in Warsaw</a>
         </div>
+
+        <a class="underline" @click="goToCompanyList('wroclaw')">Explore all</a>
 
         <div class="search-card__list flex wrap">
           <BusinessPreview
@@ -50,8 +50,6 @@
 
     &-content {
       padding: 60px;
-      padding-left: 200px;
-      background-color: color(pink-light);
     }
 
     &-header-text {
