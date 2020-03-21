@@ -1,7 +1,6 @@
 <template>
   <div class="business-day">
     <div class="container">
-      <p class="copy text-center">New to the platform</p>
       <Business
         :business="business"
         :on-light="true"
@@ -26,8 +25,8 @@
             value: 4.6,
             count: 250
           },
-          name: 'Asfalt Coffee',
-          description: 'A banging café with a wide range of hip-hop music released by Asfalt Records (O.S.T.R., Otsochodzi and Taco Hemingway). Rap is the dominating genre, along with jazz and electro.',
+          name: 'Asfalt Coffee & Vinyl',
+          description: 'A banging new café in Warsaw with a wide range of hip-hop music released by Asfalt Records, with rap is the dominating genre, along with jazz and electro',
           services: [
             { name: '10 coffees bundle', price: 80 },
             { name: 'Coffee + pie', price: 15  },

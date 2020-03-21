@@ -1,20 +1,22 @@
 <template>
   <div class="flex">
-    <div class="business-description">
-      <div class="business-texts flex column align-center justify-center">
-        <h4 class="heading heading--hero">{{ business.name }} </h4>
-        <h4 class="copy copy--large">{{ business.description }} </h4>
+    <img src="../../assets/asfalt-inside.png" />
+    <div class="business flex">
+      <div class="business flex column align-center justify-center">
+        <p class="copy text-center">New to the platform</p>
+        <h4 class="heading--hero">{{ business.name }} </h4>
+        <p class="description copy--large justify-center text-center">{{ business.description }} </p>
+        <div class="services">
+          <Service
+            v-for="service in business.services"
+            :key="service.name"
+            :service="service"
+            on-light="true"
+            @set="handleSetActiveOrder(business, service)"
+          >
+          </Service>
+        </div>
       </div>
-    </div>
-    <div class="business-services">
-      <Service
-        v-for="service in business.services"
-        :key="service.name"
-        :service="service"
-        on-light="true"
-        @set="handleSetActiveOrder(business, service)"
-      >
-      </Service>
     </div>
   </div>
 </template>
@@ -51,20 +53,17 @@
 
 <style scoped lang="scss">
   .business {
-    &-services,
-    &-description {
-      width: 50%;
-      margin-right: 50px;
-    }
+    width: 720px;
+    margin: 0 100px;
+  }
 
-    &-texts {
-      max-width: 500px;
-      margin-left: auto
-    }
+  .services {
+    width: 270px;
+  }
 
-    &-services {
-      width: 300px;
-      margin: 0 auto;
-    }
+  img {
+    width: 366px;
+    height: 488px;
+    margin: 100px;
   }
 </style>
