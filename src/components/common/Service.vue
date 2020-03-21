@@ -1,6 +1,7 @@
 <template>
   <div
     class="business-services-offer flex space-between align-center"
+    :class="{ 'business-services-offer--on-light': onLight }"
     @click="$emit('set', service)"
   >
     <p class="copy">{{ service.name }}</p>
@@ -19,6 +20,10 @@
       service: {
         type: Object,
         default: () => ({})
+      },
+      onLight: {
+        type: Boolean,
+        default: false
       }
     }
   }
@@ -40,6 +45,10 @@
     .tag {
       margin-right: 8px;
       white-space: nowrap;
+    }
+
+    &--on-light {
+      background-color: color(er-pink);
     }
   }
 </style>

@@ -7,9 +7,9 @@ body {
   color: color(text);
 
   &--hero {
-    $size: 45;
-    $sizeLg: 55;
-    $sizeXl: 65;
+    $size: 40;
+    $sizeLg: 50;
+    $sizeXl: 60;
     @include font-size($size);
     line-height: calc(#{$size}px + 8px);
     margin: globalVars(ui-default-measure3x) 0;

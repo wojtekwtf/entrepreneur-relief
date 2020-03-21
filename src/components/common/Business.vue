@@ -11,6 +11,7 @@
         v-for="service in business.services"
         :key="service.name"
         :service="service"
+        on-light="true"
         @set="handleSetActiveOrder(business, service)"
       >
       </Service>
@@ -30,6 +31,10 @@
       business: {
         type: Object,
         default: () => ({})
+      },
+      onLight: {
+        type: Boolean,
+        default: false
       }
     },
     methods: {

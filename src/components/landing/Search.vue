@@ -4,6 +4,7 @@
       <div class="search-content">
         <div class="search-header flex space-between">
           <div class="search-header-text">
+            <p class="copy">City of the week</p>
             <h2 class="heading heading--hero">Wrocław</h2>
             <p class="copy copy--large">From fine dining to dancing salsa, Wrocław has the best services to look forward to.</p>
           </div>

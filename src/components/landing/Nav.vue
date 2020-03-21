@@ -31,16 +31,12 @@ export default {
     return {
       menu: [
         {
-          label: 'How it works',
+          label: 'Customer Benefits',
           href: '#how-it-works'
         },
         {
-          label: 'Customer Benefits',
-          href: '#customer-benefits'
-        },
-        {
           label: 'Business Benefits',
-          href: '#business-benefits'
+          href: '#how-it-works'
         }
       ]
     }

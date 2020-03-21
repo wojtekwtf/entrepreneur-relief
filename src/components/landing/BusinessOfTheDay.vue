@@ -1,9 +1,10 @@
 <template>
   <div class="business-day">
     <div class="container">
-      <p class="copy text-center">Business of the day</p>
+      <p class="copy text-center">New to the platform</p>
       <Business
         :business="business"
+        :on-light="true"
       ></Business>
     </div>
   </div>

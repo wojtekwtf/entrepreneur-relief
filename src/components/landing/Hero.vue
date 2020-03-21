@@ -6,7 +6,8 @@
     <div class="rect rect4"></div>
     <div class="container">
       <div class="hero-main">
-        <h1 class="heading heading--hero heading--black text-center pink-light">Help support your <span class="pink">favorite</span><br> local business</h1>
+        <h1 class="heading heading--hero heading--black text-center pink-light">Purchase a voucher to support <br> your favourite local place and
+          <br> enjoy the service in the future</h1>
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Pay less for products after coronavirus crisis.</p>-->
 <!--        <p class="copy copy&#45;&#45;large copy&#45;&#45;white text-center">Help businesses survive.</p>-->
         <div class="hero-input flex align-center justify-center">
@@ -136,7 +137,7 @@
     }
 
     &-learn-more {
-      margin-top: 30px;
+      margin-top: 50px;
       text-decoration: underline;
     }
 
