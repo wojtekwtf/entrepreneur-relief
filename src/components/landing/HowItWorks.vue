@@ -1,5 +1,5 @@
 <template>
-  <div class="how-it-works">
+  <div class="how-it-works" id="how-it-works">
     <div class="container flex">
       <div class="how-it-works__text">
         <h1 class="heading heading--hero">How it works</h1>

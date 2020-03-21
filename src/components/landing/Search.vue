@@ -1,5 +1,5 @@
 <template>
-  <div class="search">
+  <div class="search" id="search">
     <div class="container">
       <div class="search-content">
         <div class="search-header flex space-between">
@@ -13,21 +13,22 @@
         <div class="search-card__list flex wrap">
           <div
             class="search-card"
-            v-for="item in places"
+            v-for="business in businesses"
           >
             <div class="search-card-main">
-              <img class="search-card-logo" :src="item.logo" alt="">
-              <h4 class="heading heading--primary">{{ item.name }}</h4>
+              <img class="search-card-logo" :src="business.logo" alt="">
+              <h4 class="heading heading--primary">{{ business.name }}</h4>
               <div class="search-card-rating">
                 <img src="../../assets/star.svg">
-                {{ item.rating.value }} ({{ item.rating.count }})
+                {{ business.rating.value }} ({{ business.rating.count }})
               </div>
-              <p class="copy">{{ item.description }}</p>
+              <p class="copy">{{ business.description }}</p>
             </div>
 
             <div
               class="search-card-offer flex space-between align-center"
-              v-for="service in item.services"
+              v-for="service in business.services"
+              @click="handleSetActiveOrder(business, service)"
             >
               <p class="copy">{{ service.name }}</p>
               <div class="flex align-center">
@@ -49,7 +50,7 @@
     name: 'Search',
     data() {
       return {
-        places: [
+        businesses: [
           {
             logo: 'https://www.gobrazilwines.com/wp-content/uploads/2019/01/GoBrazilWine_Vegan_Symbol-295x300.png',
             name: 'Vega',
@@ -94,6 +95,15 @@
           }
         ]
       }
+    },
+    methods: {
+      handleSetActiveOrder(business, service) {
+        this.$store.commit('setActiveOrder', {
+          business,
+          chosenService: service
+        });
+        this.$router.push({ name: 'order' })
+      }
     }
   }
 </script>
@@ -130,6 +140,7 @@
       }
 
       &-offer {
+        cursor: pointer;
         width: 100%;
         padding: 4px 24px;
         margin-top: 8px;
@@ -147,6 +158,7 @@
 
       .tag {
         margin-right: 8px;
+        white-space: nowrap;
       }
     }
 

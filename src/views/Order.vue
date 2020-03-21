@@ -1,17 +1,24 @@
 <template>
   <div class="order">
-    <OrderConfirm></OrderConfirm>
+    <OrderConfirm v-if="!paid"></OrderConfirm>
+    <OrderFinalised v-else></OrderFinalised>
   </div>
 </template>
 
 <script>
-  // @ is an alias to /src
   import OrderConfirm from '@/components/order/OrderConfirm.vue'
+  import OrderFinalised from '@/components/order/OrderFinalised.vue'
 
   export default {
     name: 'Order',
     components: {
-      OrderConfirm
+      OrderConfirm,
+      OrderFinalised
+    },
+    data() {
+      return {
+        paid: false
+      }
     }
   }
 </script>
