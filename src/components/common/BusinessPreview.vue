@@ -1,14 +1,14 @@
 <template>
   <div
-    class="business-preview"
+    class="business-preview flex column align-center"
   >
-    <div class="business-preview-main">
-      <h4 class="heading heading--primary">{{ business.name }}</h4>
+    <div class="business-preview-main flex column align-center justify-center">
+      <h4 class="heading heading--primary flex column justify-center text-center"><span>{{ business.name }}</span></h4>
       <div class="business-preview-rating" v-if="business.rating">
         <img src="../../assets/star.svg">
         {{ business.rating.value }} ({{ business.rating.count }})
       </div>
-      <p class="copy">{{ business.description }}</p>
+      <p class="copy text-center">{{ business.description }}</p>
     </div>
 
     <Service
@@ -51,8 +51,12 @@
   .business-preview {
     margin: 10px 15px;
     width: calc(100% / 3 - 60px);
-    padding: 30px;
+    padding: 15px 30px 50px;
     background: color(er-pink);
+
+    .heading {
+      height: 100px;
+    }
 
     &-logo {
       max-height: 80px;

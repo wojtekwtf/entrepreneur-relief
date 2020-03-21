@@ -31,6 +31,7 @@
 
 <style scoped lang="scss">
   .business-services-offer {
+    max-width: 300px;
     cursor: pointer;
     width: 100%;
     padding: 4px 24px;
