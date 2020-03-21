@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+  .order-confirm {
+    height: 60vh;
+  }
 </style>
