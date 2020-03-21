@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Sends an email with voucher purchase confirmation details to the app administrator.
+Resources:
+  sendemailinternalconfirmation:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: .
+      Description: 'Sends an email with voucher purchase confirmation details to the app administrator.'
+      MemorySize: 128
+      Timeout: 6
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /send_email_internal_confirmation
+            Method: ANY
+      Environment:
+        Variables:
+          MAILGUN_API_KEY: MAILGUN_API_KEY
+          MAILGUN_API_URL: MAILGUN_API_URL
+          MAILGUN_POSTMASTER_MAIL: MAILGUN_POSTMASTER_MAIL
+          MAILGUN_USER_MAIL: MAILGUN_USER_MAIL
+
