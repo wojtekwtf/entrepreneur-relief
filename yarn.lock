@@ -833,6 +833,11 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
+"@trevoreyre/autocomplete-vue@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@trevoreyre/autocomplete-vue/-/autocomplete-vue-2.1.1.tgz#7e6d11da6d04b490444022f089d5e32ec4ab2619"
+  integrity sha512-zeVzjRliM5Yv0oaBNPE3OX4U5K59jwo/OC62Qi6SE1Fd6mwO6q6MXVogmujrOrdalIqDHQo8pUvhTFL4Xr/Rfw==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"

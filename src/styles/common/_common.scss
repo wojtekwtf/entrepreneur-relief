@@ -61,7 +61,7 @@
   }
 }
 
-.input {
+.input .autocomplete-input {
   width: 360px;
   background: #fff;
   color: color(primary);
@@ -136,6 +136,44 @@
   }
 }
 
-.underline {
-  text-decoration: underline;
+.underline,
+.underline:hover {
+  text-decoration: underline !important;
+}
+
+.autocomplete-input {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.autocomplete-input:focus, .autocomplete-input[aria-expanded=true] {
+  border: none;
+  background-color: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.autocomplete-result-list {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  max-height: 296px;
+  overflow-y: auto;
+  background: #fff;
+  list-style: none;
+  box-shadow: none;
+  width: 100%;
+
+  li:hover {
+    background: color(pink-background);
+    cursor: pointer;
+  }
+}
+
+.autocomplete-result {
+  padding: 8px 24px;
+  background: none;
+  color: color(primary);
 }
