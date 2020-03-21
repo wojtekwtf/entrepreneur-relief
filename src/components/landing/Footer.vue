@@ -21,7 +21,7 @@
   .footer-box {
     height: 298px;
     padding: 100px 350px;
-    background-color: color("pink");
+    background-color: color(er-pink);
 
     &__text {
       margin: auto;
