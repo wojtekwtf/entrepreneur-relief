@@ -68,12 +68,7 @@ export default new Vuex.Store({
   },
   getters: {
     getOneBusiness(state) {
-      // WOJTEK user router.history.params.id to get current id at the company page
-      // use find fuction here.
-      // https://vuex.vuejs.org/guide/getters.html
-      console.log(router.history);
-      console.log(state.businesses);
-      return state.businesses.find(business => business.id === router.history.params.id);
+      return state.businesses.find(business => business.id == router.history.current.params.id);
     }
   }
 })

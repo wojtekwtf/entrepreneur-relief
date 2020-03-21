@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     getOneBusiness() {
-      return this.$store.state.getOneBusiness;
+      return this.$store.getters.getOneBusiness;
     }
   }
 }
