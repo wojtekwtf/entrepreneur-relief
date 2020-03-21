@@ -5,7 +5,7 @@
 
     <p class="copy">Here are the details of your registration</p>
 
-    <div class="confirm-details flex column">
+    <div class="confirm-details flex column align-center">
       <img class="confirm-logo" :src="companyToRegister.logo" alt="">
 
       <p class="copy">Name: <span class="copy--bold">
