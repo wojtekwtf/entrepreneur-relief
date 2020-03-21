@@ -1,5 +1,5 @@
 <template>
-  <div class="nav" v-if="$route.name !== 'signup'">
+  <div class="nav">
     <div class="container nav-container">
       <div class="nav-brand">
         <router-link to="/" class="flex align-center">
@@ -54,7 +54,6 @@ export default {
     background: color(primary-dark);
 
     &-container {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;

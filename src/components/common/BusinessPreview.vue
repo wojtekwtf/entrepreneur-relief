@@ -5,7 +5,7 @@
     <div class="business-preview-main">
       <img class="business-preview-logo" :src="business.logo" alt="">
       <h4 class="heading heading--primary">{{ business.name }}</h4>
-      <div class="business-preview-rating">
+      <div class="business-preview-rating" v-if="business.rating">
         <img src="../../assets/star.svg">
         {{ business.rating.value }} ({{ business.rating.count }})
       </div>
@@ -54,7 +54,7 @@
     width: calc(100% / 3 - 60px);
 
     &-logo {
-      height: 80px;
+      max-height: 80px;
       width: auto;
     }
 
