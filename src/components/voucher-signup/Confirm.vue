@@ -1,22 +1,15 @@
 <template>
-  <div class="section confirm">
-    {{ companyToRegister }}
-
-    CONFIRMED
+  <div>
+    elo
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Confirm',
-  computed: {
-    companyToRegister() {
-      return this.$store.state.companyToRegister;
-    }
+  export default {
+    name: "Confirm"
   }
-}
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 
 </style>

@@ -1,81 +1,93 @@
 <template>
-  <div class="register">
-    <div class="background"></div>
-    <div class="nav flex align-center">
-      <router-link class="underline copy--white" to="/">Back</router-link>
-      <img src="../../assets/logo.svg" alt="">
-    </div>
-    <div class="container flex">
-      <div class="register-form">
-        <div class="register-form-inputs">
-          <h1 class="heading heading--primary">Sign up your business and don't worry about the future</h1>
-          <p class="copy">Name</p>
-          <input v-model="form.name" type="text" class="input">
-          <p class="copy">Description</p>
-          <input v-model="form.description" type="text" class="input">
-          <p class="copy">Website</p>
-          <input v-model="form.website" type="text" class="input">
-          <p class="copy">Email</p>
-          <input v-model="form.email" type="text" class="input">
-          <p class="copy">Link to logo</p>
-          <input v-model="form.logoLink" type="text" class="input">
+  <div class="register flex flex-1">
+    <div class="register-form container" v-if="!formSent">
+      <div class="register-form-inputs">
+        <h1 class="heading heading--primary">Sign up your business and don't worry about the future</h1>
+        <p class="copy">Name</p>
+        <input v-model="form.name" type="text" class="input input--alone">
+        <p class="copy">Description</p>
+        <input v-model="form.description" type="text" class="input input--alone">
+        <p class="copy">Website</p>
+        <input v-model="form.website" type="text" class="input input--alone">
+        <p class="copy">Email</p>
+        <input v-model="form.email" type="text" class="input input--alone">
+        <p class="copy">Link to logo</p>
+        <input v-model="form.logoLink" type="text" class="input input--alone">
 
-          <div class="register-form-services">
-            <div class="item flex align-center" v-for="(item, index) in form.services" :key="index">
-              <div>
-                <p class="copy">Service</p>
-                <input v-model="item.name" type="text" class="input">
-              </div>
-              <div class="price">
-                <p class="copy">Price</p>
-                <input v-model="item.price" type="number" class="input input--short">
-                <div @click="add" class="add-new" v-if="index === form.services.length - 1">
-                  <img src="../../assets/star.svg">
-                </div>
-              </div>
+        <div class="register-form-services">
+          <div class="item flex align-center" v-for="(item, index) in form.services" :key="index">
+            <div>
+              <p class="copy">Service</p>
+              <input v-model="item.name" type="text" class="input input--alone">
+            </div>
+            <div class="price">
+              <p class="copy">Price</p>
+              <input v-model="item.price" type="number" class="input input--alone input--short">
             </div>
           </div>
+          <div @click="add" class="add-new flex align-center">
+            <img src="../../assets/add.svg">
+            Add next service
+          </div>
         </div>
+      </div>
 
-        <button class="btn" @click="submitForm">Sign up</button>
-      </div>
-      <div class="register-description">
-        <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-        <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-        <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-        <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      </div>
+      <button class="btn" @click="submitForm">Sign up</button>
+      <p v-if="invalidForm" class="copy copy--accent">Fill in all required fields</p>
+    </div>
+    <Confirm v-else class="register-form container">
+
+    </Confirm>
+    <div class="register-description container">
+      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'RegisterForm',
-  data() {
-    return {
-      form: {
-        name: '',
-        description: '',
-        website: '',
-        email: '',
-        logoLink: '',
-        services: [{ name: '', price: '' }]
-      }
-    }
-  },
-  methods: {
-    add() {
-      this.form.services.push({ name: '', price: '' })
+  import Confirm from '@/components/voucher-signup/Confirm.vue'
+
+  export default {
+    name: 'RegisterForm',
+    components: {
+      Confirm
     },
-    submitForm() {
-      if (this.form.name && this.form.description && this.form.website && this.form.email && this.form.logoLink && this.form.services[0].name && this.form.services[0].price) {
-        this.$store.commit('setCompanyToRegister', this.form);
-        this.$router.push({ name: 'signup', query: {sent: true} })
+    data() {
+      return {
+        form: {
+          name: '',
+          description: '',
+          website: '',
+          email: '',
+          logoLink: '',
+          services: [{ name: '', price: '' }]
+        },
+        triedToSend: false,
+        formSent: true
+      }
+    },
+    computed: {
+      invalidForm() {
+        return this.triedToSend && (!this.form.name || !this.form.description || !this.form.website || !this.form.email || !this.form.logoLink || !this.form.services[0].name || !this.form.services[0].price);
+      }
+    },
+    methods: {
+      add() {
+        this.form.services.push({ name: '', price: '' });
+      },
+      submitForm() {
+        this.triedToSend = true;
+
+        if (this.form.name && this.form.description && this.form.website && this.form.email && this.form.logoLink && this.form.services[0].name && this.form.services[0].price) {
+          this.$store.commit('setCompanyToRegister', this.form);
+          this.formSent = true;
+        }
       }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
@@ -84,7 +96,6 @@ export default {
     width: 100vw;
     position: relative;
     overflow: hidden;
-    padding: 50px 0 30px;
 
     .copy {
       margin: 10px 0 2px;
@@ -101,7 +112,7 @@ export default {
     }
 
     &-form {
-      width: 40%;
+      width: 65%;
 
       &-inputs {
         max-height: 80vh;
@@ -112,23 +123,19 @@ export default {
       .btn {
         margin-top: 20px;
         margin-left: 10px;
+
+        + p {
+          margin-left: 10px;
+        }
       }
     }
 
     &-description {
-      width: 60%;
+      width: 35%;
       padding-left: 20%;
       padding-top: 20px;
-    }
-
-    .background {
-      position: absolute;
-      width: 70vw;
-      height: 200vh;
+      height: 100%;
       background: color(primary-dark);
-      transform: rotate(-20deg);
-      top: -40vh;
-      right: -30vw;
     }
 
     .price {
@@ -136,11 +143,14 @@ export default {
       position: relative;
     }
 
-    .item {
-      .add-new {
-        position: absolute;
-        right: -24px;
-        bottom: 12px;
+    .add-new {
+      margin-top: 16px;
+      cursor: pointer;
+
+      img {
+        height: 20px;
+        width: 20px;
+        margin-right: 4px;
       }
     }
   }

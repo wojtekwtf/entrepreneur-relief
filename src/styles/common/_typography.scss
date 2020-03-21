@@ -89,6 +89,10 @@ body {
     color: color(pink-light);
   }
 
+  &--accent {
+    color: color(accent);
+  }
+
   &--uppercase {
     text-transform: uppercase;
   }
