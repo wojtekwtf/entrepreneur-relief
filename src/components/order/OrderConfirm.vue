@@ -1,5 +1,5 @@
 <template>
-  <div class="order-confirm flex column" v-if="paid">
+  <div class="order-confirm flex column" v-if="!paid">
     <VueStripeCheckout
       ref="checkoutRef"
       currency="PLN"
