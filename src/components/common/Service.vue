@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'Business',
+    name: 'Service',
     props: {
       service: {
         type: Object,
@@ -45,10 +45,17 @@
     .tag {
       margin-right: 8px;
       white-space: nowrap;
+      background: #F2F2F2;
+      padding: 6px 14px;
+      margin-left: 8px;
     }
 
     &--on-light {
       background-color: color(er-pink);
+
+      .tag {
+        background: white;
+      }
     }
   }
 </style>

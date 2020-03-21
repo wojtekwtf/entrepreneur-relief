@@ -17,11 +17,11 @@ $globalVars: (
 );
 
 $colors: (
-  primary-dark: #FDD886,
+  primary-dark: darken(#FDD886, 5%),
   primary: #FDD886,
-  primary-light: #FDD886,
-  primary-x-light: #FDD886,
-  primary-xx-light: #FDD886,
+  primary-light: lighten(#FDD886, 3%),
+  primary-x-light: lighten(#FDD886, 5%),
+  primary-xx-light: lighten(#FDD886, 8%),
 
   pink-background: #FFFBF7,
   gray-background: #FAFAFA,
@@ -54,5 +54,7 @@ $colors: (
   //error-border: #FFA39E,
   //error-primary: #F5222D,
   //error-primary-hover: #FF4D4F,
-  er-blue :#47A7EC
+  er-blue :#47A7EC,
+  light-blue: #266186,
+  orange: #FED980
 );

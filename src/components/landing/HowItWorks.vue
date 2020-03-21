@@ -2,7 +2,7 @@
   <div class="how-it-works" id="how-it-works">
     <div class="container">
       <h1 class="heading heading--hero">How does it work?</h1>
-      <h2 class="copy copy--large">Your favourite local place cannot sell its services due to the crisis. So let’s help them by buying their service for the future.</h2>
+      <h2 class="copy copy--large">Your favourite local place cannot sell its services due to the crisis. <br> So let’s help them by buying their service for the future.</h2>
       <div class="how-it-works__list flex row">
         <div class="flex column">
           <div class="how-it-works__item flex column">
@@ -49,8 +49,8 @@
 
 <style scoped lang="scss">
   .how-it-works {
-    padding: 80px 0px;
-    width: 790px;
+    padding: 80px 0;
+    max-width: 900px;
     margin: auto;
 
 
@@ -59,8 +59,9 @@
     }
 
     &__item {
-      width: 80%;
       margin-bottom: 10px;
+      min-height: 180px;
+      padding-right: 20px;
 
       h3 {
         max-width: 80%;

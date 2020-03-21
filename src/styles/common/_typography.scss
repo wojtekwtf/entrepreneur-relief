@@ -96,4 +96,22 @@ body {
   &--uppercase {
     text-transform: uppercase;
   }
+
+  &--prelabel {
+    color: color(light-blue);
+  }
+
+  &--underline-color {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 4px;
+      background: color(orange);
+      width: 100%;
+    }
+  }
 }

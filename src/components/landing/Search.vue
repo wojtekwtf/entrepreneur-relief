@@ -1,16 +1,18 @@
 <template>
   <div class="search" id="search">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
     <div class="container">
       <div class="search-content">
         <div class="search-header flex space-between">
           <div class="search-header-text">
-            <p class="copy">City of the week</p>
+            <p class="copy copy--prelabel">City of the week</p>
             <h2 class="heading heading--hero">Wrocław</h2>
             <p class="copy copy--large">From fine dining to dancing salsa, Wrocław has the best services to look forward to.</p>
           </div>
         </div>
 
-        <a class="underline" @click="goToCompanyList('wroclaw')">Explore all</a>
+        <a class="copy copy--underline-color" @click="goToCompanyList('wroclaw')">Explore all</a>
 
         <div class="search-card__list flex wrap">
           <BusinessPreview
@@ -47,10 +49,11 @@
 
 <style scoped lang="scss">
   .search {
-    padding: 100px 0;
+    padding: 0 0 100px;
+    position: relative;
 
     &-content {
-      padding: 60px;
+      padding: 0 60px;
     }
 
     &-header-text {
@@ -69,6 +72,27 @@
 
     &-see-more {
       margin-top: 20px;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .circle1 {
+      height: 100px;
+      width: 100px;
+      background: color(light-blue);
+      right: 400px;
+      top: 0;
+    }
+
+    .circle2 {
+      height: 1000px;
+      width: 1000px;
+      background: color(primary);
+      top: -50px;
+      right: -600px;
     }
   }
 </style>
