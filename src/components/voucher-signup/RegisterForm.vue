@@ -10,24 +10,26 @@
         <div class="register-form-inputs">
           <h1 class="heading heading--primary">Sign up your business and don't worry about the future</h1>
           <p class="copy">Name</p>
-          <input type="text" class="input">
+          <input v-model="form.name" type="text" class="input">
           <p class="copy">Description</p>
-          <input type="text" class="input">
+          <input v-model="form.description" type="text" class="input">
           <p class="copy">Website</p>
-          <input type="text" class="input">
+          <input v-model="form.website" type="text" class="input">
+          <p class="copy">Email</p>
+          <input v-model="form.email" type="text" class="input">
           <p class="copy">Link to logo</p>
-          <input type="text" class="input">
+          <input v-model="form.logoLink" type="text" class="input">
 
           <div class="register-form-services">
-            <div class="item flex align-center" v-for="(item, index) in services" :key="index">
+            <div class="item flex align-center" v-for="(item, index) in form.services" :key="index">
               <div>
                 <p class="copy">Service</p>
-                <input type="text" class="input">
+                <input v-model="item.name" type="text" class="input">
               </div>
               <div class="price">
                 <p class="copy">Price</p>
-                <input type="text" class="input input--short">
-                <div @click="add" class="add-new" v-if="index === services.length - 1">
+                <input v-model="item.price" type="number" class="input input--short">
+                <div @click="add" class="add-new" v-if="index === form.services.length - 1">
                   <img src="../../assets/star.svg">
                 </div>
               </div>
@@ -35,7 +37,7 @@
           </div>
         </div>
 
-        <button class="btn">Sign up</button>
+        <button class="btn" @click="submitForm">Sign up</button>
       </div>
       <div class="register-description">
         <p class="copy copy--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
@@ -52,12 +54,25 @@ export default {
   name: 'RegisterForm',
   data() {
     return {
-      services: [{ name: '', price: '' }]
+      form: {
+        name: '',
+        description: '',
+        website: '',
+        email: '',
+        logoLink: '',
+        services: [{ name: '', price: '' }]
+      }
     }
   },
   methods: {
     add() {
-      this.services.push({ name: '', price: '' })
+      this.form.services.push({ name: '', price: '' })
+    },
+    submitForm() {
+      if (this.form.name && this.form.description && this.form.website && this.form.email && this.form.logoLink && this.form.services[0].name && this.form.services[0].price) {
+        this.$store.commit('setCompanyToRegister', this.form);
+        this.$router.push({ name: 'signup', query: {sent: true} })
+      }
     }
   }
 }
@@ -96,6 +111,7 @@ export default {
 
       .btn {
         margin-top: 20px;
+        margin-left: 10px;
       }
     }
 

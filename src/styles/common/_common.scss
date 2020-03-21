@@ -15,15 +15,6 @@
   }
 }
 
-.section {
-  height: 300px;
-  padding: 0 200px;
-
-  &:nth-of-type(odd) {
-    background-color: color(gray-background-medium);
-  }
-}
-
 .btn {
   position: relative;
   background: color(primary);
@@ -120,6 +111,7 @@
   color: color(primary);
   padding: 4px 8px;
   border-radius: 12px;
+  white-space: nowrap;
 }
 
 .text-center {
@@ -140,7 +132,7 @@
   img {
     position: absolute;
     right: 16px;
-    top: 14px;
+    top: 10px;
   }
 }
 

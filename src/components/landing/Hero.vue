@@ -15,7 +15,7 @@
             <img src="../../assets/icon-search.svg">
           </div>
         </div>
-        <a class="hero-learn-more pink-light text-center">Learn more</a>
+        <a href="#search" class="hero-learn-more pink-light text-center">Learn more</a>
       </div>
     </div>
   </div>

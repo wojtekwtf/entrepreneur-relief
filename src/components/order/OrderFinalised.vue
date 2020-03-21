@@ -1,12 +1,12 @@
 <template>
-  <div class="section signup-how-it-works">
-    Signup How it works
+  <div class="order-finalised">
+    Order finalised
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SignupHowItWorks',
+  name: 'OrderFinalised',
 }
 </script>
 
