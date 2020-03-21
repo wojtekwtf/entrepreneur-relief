@@ -52,7 +52,7 @@
     margin: 10px 15px;
     width: calc(100% / 3 - 60px);
     padding: 30px;
-    background: color(pink);
+    background: color(er-pink);
 
     &-logo {
       max-height: 80px;

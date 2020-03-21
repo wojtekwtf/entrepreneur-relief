@@ -1,127 +1,38 @@
 <template>
-  <div class="footer-box text-center">
+  <div class="footer-box">
     <div class="flex column">
-      <h1 class="heading--hero">Find the local business you wish to support</h1>
-      <div class="footer-box__search hero-input flex align-center justify-center">
-        <div class="input-wrapper">
-          <Autocomplete
-            :search="searchBusiness"
-            placeholder="Search for a local business..."
-            aria-label="Search for a local business..."
-            class="input"
-            :get-result-value="getResultsValue"
-            @submit="handleSubmitBusiness"
-            :loading="loadingBusiness"
-          ></Autocomplete>
-          <img v-if="!loadingBusiness" src="../../assets/icon-search.svg">
-          <img v-else class="loading" src="../../assets/loading.svg">
-        </div>
-        <p class="footer-or copy">
-          or
-        </p>
-        <div class="input-wrapper">
-          <Autocomplete
-            :search="searchCity"
-            placeholder="Search for a city..."
-            aria-label="Search for a city..."
-            class="input"
-            :class="{ 'input--loading': true }"
-            :get-result-value="getResultsValue"
-            @submit="handleSubmitCity"
-            :loading="loadingCity"
-          ></Autocomplete>
-          <img v-if="!loadingCity" src="../../assets/icon-search.svg">
-          <img v-else class="loading" src="../../assets/loading.svg">
-        </div>
-      </div>
-      <div class="footer-box__logo flex row justify-center">
-        <img src="../../assets/logo.svg" alt=""/>
-        eRelief
+      <h1 class="footer-box__text copy copy--large justify-center text-center">Together, we can all make a difference and help these businesses thrive</h1>
+      <div class="flex row justify-center">
+        <img class="logo-image" src="../../assets/logo-black.svg" alt=""/>
+        <p class="logo-text">eRelief</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Autocomplete from '@trevoreyre/autocomplete-vue'
 
   export default {
     name: 'Footer',
-    components: {
-      Autocomplete
-    },
-    data() {
-      return {
-        loadingBusiness: false,
-        loadingCity: false,
-        businesses: [
-          {
-            id: 1,
-            label: 'La Rosa Nostra'
-          },
-          {
-            id: 2,
-            label: 'Factory Energy Yoga'
-          }
-        ],
-        cities: [
-          {
-            city: 'warsaw',
-            label: 'Warsaw'
-          },
-          {
-            city: 'wroclaw',
-            label: 'Wrocław'
-          }
-        ]
-      }
-    },
-    methods: {
-      searchBusiness(input) {
-        if (input.length < 1) { return [] }
-        return this.businesses.filter(business => business.label.toLowerCase().startsWith(input.toLowerCase()));
-      },
-      searchCity(input) {
-        if (input.length < 1) { return [] }
-        return this.cities.filter(city => city.label.toLowerCase().startsWith(input.toLowerCase()));
-      },
-      getResultsValue(result) {
-        return result.label;
-      },
-      handleSubmitBusiness({id}) {
-        this.loadingBusiness = true;
-        return new Promise(resolve => setTimeout(() => {
-          this.$router.push({name: 'company', params: {id}});
-          resolve();
-        }, 500));
-      },
-      handleSubmitCity({city}) {
-        this.loadingCity = true;
-        return new Promise(resolve => setTimeout(() => {
-          this.$router.push({name: 'company-list', params: {city}});
-          resolve();
-        }, 500));
-      }
-    }
   }
 </script>
 
 <style scoped lang="scss">
   .footer-box {
-    height: 600px;
+    height: 298px;
     padding: 100px 350px;
-    background-color: black;
+    background-color: color(er-pink);
 
-    &__search {
-      padding: 64px;
+    &__text {
+      margin: auto;
+      padding-bottom: 25px;
+      width: 50%;
     }
   }
 
-  .footer-or {
-    margin: 0 20px;
+  .logo-text {
+    margin-top: 14px;
+    padding: 10px;
   }
 
-  .footer {
-    text-align: left;
-  }
 </style>
