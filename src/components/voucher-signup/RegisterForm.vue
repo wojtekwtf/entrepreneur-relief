@@ -41,10 +41,12 @@
     </div>
     <Confirm v-else class="register-form container flex column align-center"></Confirm>
     <div class="register-description container">
-      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
-      <p class="copy copy--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque autem cum ducimus ea eum ipsam labore molestiae numquam, quis quod reiciendis repudiandae sapiente tempore ut velit vero? Doloribus, vitae?</p>
+      <p class="copy copy--black">Our app saves small/medium businesses and brings them stable income even if they are not able to provide services right now.</p>
+      <p class="copy copy--black">During epidemiological status everything is closed: restaurants, gyms, dancing schools, hairdressers and all other businesses which are serving direct services to their customers.
+It means that they are in critical situation right now - they are left without any income, but with bills and salaries to be paid. Some of them are already thinking if they can survive during this time.</p>
+      <p class="copy copy--black">Our solution solves this problem and lets clients buy a service in advance (possibly with some discount). The client is paying now, the business is getting income now, but the client will use the service in the future, when it will be already possible.</p>
+      <p class="copy copy--black">It means that businesses would have an income even if they cannot provide the service right now.
+As additional support we would like to cooperate with the government which could support small enterprises and give them tax relief for the service which were sold though our app (the owner of the company can print a report from the app and attach to the tax proposal).</p>
     </div>
   </div>
 </template>
