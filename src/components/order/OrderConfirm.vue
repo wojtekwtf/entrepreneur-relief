@@ -37,6 +37,11 @@
     components: {
       BusinessPreview
     },
+    data() {
+      return {
+        paid: false
+      }
+    },
     computed: {
       activeOrder() {
         return this.$store.state.activeOrder;
@@ -79,6 +84,8 @@
           .catch(function (error) {
             console.log(error);
           });
+
+        this.paid = true;
       },
       done() {
       },
