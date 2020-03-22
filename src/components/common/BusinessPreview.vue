@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="business-preview flex column align-center"
-  >
+  <div class="business-preview flex column align-center">
     <div class="business-preview-main flex column align-center justify-center">
       <h4 class="heading heading--primary flex column justify-center text-center"><span>{{ business.name }}</span></h4>
       <div class="business-preview-rating" v-if="business.rating">
@@ -53,6 +51,7 @@
     width: calc(100% / 3 - 60px);
     padding: 15px 30px 50px;
     background: color(er-pink);
+    min-width: 330px;
 
     .heading {
       height: 100px;

@@ -53,11 +53,15 @@
     position: relative;
 
     &-content {
-      padding: 0 60px;
+      @include md-up {
+        padding: 0 60px;
+      }
     }
 
     &-header-text {
-      max-width: 50%;
+      @include md-up {
+        max-width: 50%;
+      }
 
       .heading--hero {
         margin-top: 0;
@@ -67,6 +71,17 @@
     &-card {
       &__list {
         margin-top: 20px;
+
+        .business-preview {
+          min-width: 330px;
+          margin: 10px 0;
+
+          &:nth-of-type(2) {
+            @include xs-up {
+              margin: 10px 30px;
+            }
+          }
+        }
       }
     }
 
@@ -85,6 +100,11 @@
       background: color(light-blue);
       right: 400px;
       top: 0;
+      display: none;
+
+      @include md-up {
+        display: block;
+      }
     }
 
     .circle2 {
@@ -93,6 +113,11 @@
       background: color(primary);
       top: -50px;
       right: -600px;
+      display: none;
+
+      @include md-up {
+        display: block;
+      }
     }
   }
 </style>

@@ -56,12 +56,20 @@
 
     &__list {
       margin-top: 40px;
+      flex-wrap: wrap;
+
+      @include md-up {
+        flex-wrap: nowrap;
+      }
     }
 
     &__item {
       margin-bottom: 10px;
-      min-height: 180px;
       padding-right: 20px;
+
+      @include md-up {
+        min-height: 180px;
+      }
 
       h3 {
         max-width: 80%;

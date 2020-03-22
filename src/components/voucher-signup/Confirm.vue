@@ -25,6 +25,7 @@
         v-for="service in companyToRegister.services"
         :key="service.name"
         :service="service"
+        :on-light="true"
       >
       </Service>
     </div>
@@ -48,6 +49,10 @@
 </script>
 
 <style scoped>
+  .confirm {
+    padding-top: 20px;
+  }
+
   .confirm-logo {
     max-height: 80px;
     width: auto;

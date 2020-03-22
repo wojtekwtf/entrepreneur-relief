@@ -63,11 +63,11 @@
         loadingCity: false,
         businesses: [
           {
-            id: 1,
+            id: 2,
             label: 'La Rosa Nostra'
           },
           {
-            id: 2,
+            id: 3,
             label: 'Factory Energy Yoga'
           }
         ],
@@ -96,6 +96,7 @@
         return result.label;
       },
       handleSubmitBusiness({id}) {
+        console.log(id)
         this.loadingBusiness = true;
         return new Promise(resolve => setTimeout(() => {
           this.$router.push({name: 'company', params: {id}});
@@ -152,6 +153,7 @@
 
     &-input {
       margin-top: 30px;
+      flex-wrap: wrap;
 
       .input .autocomplete-input {
         padding-right: 90px;
@@ -159,7 +161,7 @@
     }
 
     &-or {
-      margin: 0 20px;
+      margin: 10px 20px;
     }
   }
 

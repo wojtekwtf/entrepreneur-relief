@@ -1,10 +1,10 @@
 <template>
-  <div class="flex">
-    <img src="../../assets/asfalt-inside.png" />
+  <div class="flex justify-center">
+    <img v-if="image" src="../../assets/asfalt-inside.png" />
     <div class="business flex">
       <div class="business flex column align-center justify-center">
-        <p class="copy text-center">New to the platform</p>
-        <h4 class="heading--hero">{{ business.name }} </h4>
+        <p class="copy text-center copy--prelabel" v-if="prelabel">New to the platform</p>
+        <h4 class="heading--hero text-center">{{ business.name }} </h4>
         <p class="description copy--large justify-center text-center">{{ business.description }} </p>
         <div class="services">
           <Service
@@ -37,6 +37,14 @@
       onLight: {
         type: Boolean,
         default: false
+      },
+      prelabel: {
+        type: Boolean,
+        default: true
+      },
+      image: {
+        type: Boolean,
+        default: true
       }
     },
     methods: {
@@ -53,8 +61,13 @@
 
 <style scoped lang="scss">
   .business {
-    width: 720px;
-    margin: 0 100px;
+    width: 100%;
+    margin: 0 20px;
+
+    @include lg-up {
+      width: 60%;
+      margin: 0 100px;
+    }
   }
 
   .services {
@@ -62,8 +75,12 @@
   }
 
   img {
-    width: 366px;
-    height: 488px;
-    margin: 100px;
+    width: 40%;
+    margin-left: auto;
+    display: none;
+
+    @include md-up {
+      display: block;
+    }
   }
 </style>

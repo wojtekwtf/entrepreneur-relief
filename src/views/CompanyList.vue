@@ -1,8 +1,8 @@
 <template>
   <div class="company-list" v-if="currentCity">
     <div class="container">
-      <h2 class="heading heading--hero">{{ currentCity.city }}</h2>
-      <p class="copy copy--large">{{ currentCity.description }}</p>
+      <h2 class="move-to-right heading heading--hero">{{ currentCity.city }}</h2>
+      <p class="move-to-right copy copy--large">{{ currentCity.description }}</p>
 
       <div class="company-list__list">
         <BusinessPreview
@@ -61,5 +61,10 @@
       display: flex;
       flex-wrap: wrap;
     }
+  }
+
+  .move-to-right {
+    position: relative;
+    left: 14px;
   }
 </style>

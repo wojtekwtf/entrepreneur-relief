@@ -105,8 +105,12 @@
 
     &__content {
       margin: 0 auto;
-      padding: 70px 0 30px;
-      width: 600px;
+      padding: 30px 10px;
+
+      @include md-up {
+        width: 600px;
+        padding: 70px 0 30px;
+      }
 
       .btn {
         margin-top: 20px;
@@ -114,7 +118,11 @@
     }
 
     .business-preview {
-      width: 400px
+      width: 250px;
+
+      @include sm-up {
+        width: 400px
+      }
     }
   }
 </style>

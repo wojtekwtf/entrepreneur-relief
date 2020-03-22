@@ -65,7 +65,11 @@
 .input {
   .autocomplete-input,
   &--alone {
-    width: 360px;
+    @include lg-up {
+      width: 360px;
+    }
+
+    width: 280px;
     background: #fff;
     color: color(black);
     font: inherit;
@@ -74,6 +78,10 @@
     border-radius: 4px;
     outline: 0;
     padding: 12px;
+  }
+
+  &--medium {
+    width: 180px;
   }
 
   &--short {

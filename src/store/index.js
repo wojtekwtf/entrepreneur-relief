@@ -71,7 +71,7 @@ export default new Vuex.Store({
   },
   getters: {
     getOneBusiness(state) {
-      return state.businesses.find(business => business.id == router.history.current.params.id);
+      return state.businesses.find(business => business.id === Number(router.history.current.params.id));
     }
   }
 })

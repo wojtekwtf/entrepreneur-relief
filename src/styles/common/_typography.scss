@@ -7,7 +7,7 @@ body {
   color: color(text);
 
   &--hero {
-    $size: 40;
+    $size: 30;
     $sizeLg: 50;
     $sizeXl: 60;
     @include font-size($size);
@@ -26,10 +26,16 @@ body {
   }
 
   &--primary {
-    $size: 34;
+    $size: 26;
+    $sizeLg: 34;
     @include font-size($size);
     line-height: calc(#{$size}px + 8px);
     margin: globalVars(ui-default-measure) 0;
+
+    @include lg-up {
+      @include font-size($sizeLg);
+      line-height: calc(#{$sizeLg}px + 8px);
+    }
   }
 
   &--secondary {

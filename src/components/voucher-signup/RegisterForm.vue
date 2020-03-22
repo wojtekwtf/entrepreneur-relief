@@ -19,7 +19,7 @@
             <div class="item flex align-center" v-for="(item, index) in form.services" :key="index">
               <div>
                 <p class="copy">Service</p>
-                <input v-model="item.name" type="text" class="input input--alone">
+                <input v-model="item.name" type="text" class="input input--alone input--medium">
               </div>
               <div class="price">
                 <p class="copy">Price</p>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="flex justify-center">
-        <button class="btn" @click="submitForm">Sign up</button>
+        <button class="btn btn-black" @click="submitForm">Sign up</button>
       </div>
       <p v-if="invalidForm" class="copy copy--accent">Fill in all required fields</p>
     </div>
@@ -86,7 +86,10 @@ As additional support we would like to cooperate with the government which could
         this.triedToSend = true;
 
         if (this.form.name && this.form.description && this.form.website && this.form.email && this.form.logo && this.form.services[0].name && this.form.services[0].price) {
-          this.$store.commit('setCompanyToRegister', this.form);
+          this.$store.commit('setCompanyToRegister', {
+            ...this.form,
+            services: this.form.services.filter(s => s.name)
+          });
           this.formSent = true;
         }
       }
@@ -96,10 +99,17 @@ As additional support we would like to cooperate with the government which could
 
 <style scoped lang="scss">
   .register {
-    height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
+    flex-direction: column;
+    justify-content: normal;
+
+    @include md-up {
+      flex-direction: row;
+      justify-content: center;
+      height: 100vh;
+    }
 
     .nav {
       position: fixed;
@@ -112,11 +122,19 @@ As additional support we would like to cooperate with the government which could
     }
 
     &-form {
-      width: 55%;
+      width: 95%;
+
+      @include lg-up {
+        width: 55%;
+      }
+
       padding-bottom: 70px;
 
       &-inputs {
-        max-height: 80vh;
+        @include lg-up {
+          max-height: 80vh;
+        }
+
         overflow: auto;
         padding: 20px 10px 30px;
 
@@ -141,10 +159,16 @@ As additional support we would like to cooperate with the government which could
     }
 
     &-description {
-      width: 45%;
+      width: 95%;
+      padding: 30px;
+
+      @include lg-up {
+        padding: 20px 100px 0;
+        width: 45%;
+      }
+
       height: 100%;
       background: color(primary-dark);
-      padding: 20px 100px 0;
 
       p {
         margin-bottom: 60px;

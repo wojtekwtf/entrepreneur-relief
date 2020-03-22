@@ -68,6 +68,12 @@ export default {
     }
 
     &-menu {
+      display: none;
+
+      @include md-up {
+        display: block;
+      }
+
       &-item {
         margin: 0 16px;
         color: black;

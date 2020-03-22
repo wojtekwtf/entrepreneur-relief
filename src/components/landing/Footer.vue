@@ -20,13 +20,17 @@
 <style scoped lang="scss">
   .footer-box {
     height: 298px;
-    padding: 100px 350px;
+    padding: 100px 0;
     background-color: color(er-pink);
 
     &__text {
       margin: auto;
       padding-bottom: 25px;
-      width: 400px;
+      max-width: 300px;
+
+      @include sm-up {
+        max-width: 400px;
+      }
     }
   }
 
