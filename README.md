@@ -12,6 +12,20 @@ We have built the app with VueJS for frontend and AWS Lambda for handling emails
 
 Here is a walk-through!
 
+### As you enter the ladning page you can immidiately search for you favourite local businesses...
+<img src="screenshots/landing_web.png" width="100%">
+
+### ...or support recommended ones!
+<img src="screenshots/companies_web.png" width="100%">
+
+### Once you have chosen a voucher, you can pay for the service.
+<img src="screenshots/payment_web.png" width="100%">
+
+### It works on mobile as well!
+<img src="screenshots/landing_mobile.PNG" width="30%">
+<img src="screenshots/how_it_works_mobile.PNG" width="30%">
+<img src="screenshots/payment_mobile.PNG" width="30%">
+
 ## Development & contributions
 We currently stopped developing the app. If you want to contribute/learn Vue please feel free to reach out! This would be a cool learning opportunity (certainly was for me) 🚀
 
