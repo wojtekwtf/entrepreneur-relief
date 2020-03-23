@@ -9,6 +9,7 @@ This is working MVP, you can check it out at https://eloquent-mayer-d20ce1.netli
 
 ## Product
 We have built the app with VueJS for frontend and AWS Lambda for handling emails.
+Our designs have been done with ❤️ and [figma](https://www.figma.com/file/MaZjbGi6JZENP5fqP52fS7/Relief-Wireframes?node-id=45%3A1355): 
 
 Here is a walk-through!
 
