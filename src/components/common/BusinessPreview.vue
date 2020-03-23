@@ -49,7 +49,7 @@
   .business-preview {
     margin: 10px 15px;
     width: calc(100% / 3 - 60px);
-    padding: 15px 30px 50px;
+    padding: 15px 15px 50px;
     background: color(er-pink);
     min-width: 330px;
 

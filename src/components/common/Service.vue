@@ -7,7 +7,7 @@
     <p class="copy">{{ service.name }}</p>
     <div class="flex align-center">
       <div class="tag">
-        {{ service.price }} zł
+        Buy for {{ service.price }} zł
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
     max-width: 300px;
     cursor: pointer;
     width: 100%;
-    padding: 4px 24px;
+    padding: 4px 12px;
     margin-top: 8px;
     background-color: white;
     border-radius: 8px;
