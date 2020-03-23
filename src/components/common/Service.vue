@@ -7,7 +7,7 @@
     <p class="copy">{{ service.name }}</p>
     <div class="flex align-center">
       <div class="tag">
-        Buy for {{ service.price }} zł
+        <span v-if="!onlyPrice">Buy for </span>{{ service.price }} zł
       </div>
     </div>
   </div>
@@ -22,6 +22,10 @@
         default: () => ({})
       },
       onLight: {
+        type: Boolean,
+        default: false
+      },
+      onlyPrice: {
         type: Boolean,
         default: false
       }

@@ -13,6 +13,8 @@
       v-for="service in business.services"
       :key="service.name"
       :service="service"
+      :only-price="onlyPrice"
+      :on-light="onLight"
       @set="handleSetActiveOrder(business, service)"
     >
     </Service>
@@ -31,6 +33,14 @@
       business: {
         type: Object,
         default: () => ({})
+      },
+      onlyPrice: {
+        type: Boolean,
+        default: false
+      },
+      onLight: {
+        type: Boolean,
+        default: false
       }
     },
     methods: {

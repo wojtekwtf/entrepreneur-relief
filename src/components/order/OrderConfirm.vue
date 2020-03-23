@@ -15,7 +15,7 @@
     <div class="order-confirm__content flex column align-center justify-center">
       <h1 class="text-center heading heading--primary">Here is an overview of your order</h1>
 
-      <BusinessPreview :business="businessParsed" on-light></BusinessPreview>
+      <BusinessPreview :business="businessParsed" :on-light="true" :only-price="true"></BusinessPreview>
 
       <button class="btn btn-black" @click="checkout">Checkout</button>
     </div>
